@@ -7,6 +7,7 @@ const routes = require("../src/routes/main")
 //const bodyParser = require('body-parser')
 const Detail = require("./models/Detail")
 const slider = require("./models/slider")
+const port = process.env.PORT || 8000;
 
 //static/CSS/StyleSheet.CSS
 app.use(bodyParser.urlencoded({
@@ -96,6 +97,10 @@ mongoose.connect("mongodb+srv://SatyamRandawa:Loveyam@cluster0.s50dt.mongodb.net
 })
 
 
-app.listen(process.env.PORT | 4000, () => {
-    console.log("server is running at 4000");
+// app.listen(process.env.PORT | 4000, () => {
+//     console.log("server is running at 4000");
+// })
+
+app.listen(port, () => {
+    console.log(`server connected on ${port}`);
 })
