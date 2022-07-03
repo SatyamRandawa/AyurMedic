@@ -26,6 +26,10 @@ const userRegister =new mongoose.Schema ({
     repeatPassword:{
         type:String,
         required:true
+    },
+    token:{
+        type:String,
+        default: ""
     }
 
 
